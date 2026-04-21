@@ -1,44 +1,82 @@
+# ⚡ RAAJ Modules
 
-### KernelLogger
+🚀 Kernel-level performance modules for Android power users.
 
-# Core Purpose
-KernelLogger Module is a persistent, automated diagnostic tool that:
+---
 
-**🟢Captures Critical Logs**
+## 🔥 About
+RAAJ Modules is a collection of advanced Magisk modules designed to optimize:
+- CPU & GPU performance
+- Touch responsiveness
+- Network latency
+- Gaming experience
 
-1 :- Kernel logs (dmesg): Hardware/driver events, boot failures, kernel panics
+Built for real-world performance — not just benchmarks.
 
-2 :- System logs (logcat): App crashes, service errors, Android framework issues
+---
 
-**🟢Saves to External Storage**
+## 📦 Modules
 
-1 :- Writes logs to SD card (/mnt/media_rw/[SD-CARD-ID]/LOGS/) for:
-Offline debugging (no ADB needed)
+### ⚙️ KernelEnhancer
+- CPU governor tuning
+- I/O scheduler optimization
+- VM & memory tweaks
+- GPU throttling control
 
-2 :- Crash survival (logs persist through reboots)
+---
 
-**🟢Self-Maintaining**
+### 🎮 GameEnhancer
+- Auto game detection
+- Performance mode switching
+- Real-time priority (renice + SCHED_FIFO)
+- Lag reduction & FPS stability
 
-1 :- Auto-rotates every 48 hours to prevent storage exhaustion
+---
 
-2 :- No manual cleanup required
+### ✋ TouchEnhancer
+- Touch latency reduction
+- UI smoothness improvements
+- Real-time process boosting
 
-# Technical Value Proposition
+---
 
-**🔵For Developers**
+### 🌐 NetworkEnhancer
+- TCP/UDP tuning
+- Buffer optimization
+- Low latency networking
 
-1 :- Debug boot loops by reviewing kmsg.log post-crash
+---
 
-2 :- Identify hardware faults (e.g., touchscreen errors in kernel logs)
+## 🚀 Features
+✔ Kernel-level tweaks  
+✔ Real-time performance boost  
+✔ Gaming optimized  
+✔ Universal support (Android 9+)  
+✔ Lightweight & efficient  
 
-**🔵For Kernel Testers & ROM Tester**
+---
 
-1 :- Capture intermittent crashes during long stress tests
+## 📊 Goal
+Deliver stable, smooth, and responsive performance across all Android devices.
 
-2 :- Share logs easily (pull SD card vs. ADB file transfers)
+---
 
-**🔵For Power Users**
+## 🌐 Website
+👉 https://raajk20pro.github.io/
 
-1 :- Monitor background system behavior without a PC
+---
 
-2 :- Detect SELinux denials or resource* leaks
+## 👤 Developer
+**@RAAJK20Pro**  
+Android Performance Engineer
+
+---
+
+## ⚠️ Disclaimer
+Use at your own risk.  
+These modules modify system-level parameters.
+
+---
+
+## ⭐ Support
+If you like this project, consider starring ⭐ the repo.
