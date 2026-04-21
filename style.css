@@ -1,50 +1,82 @@
-body {
-  margin: 0;
-  overflow-x: hidden;
-  background: black;
-  color: white;
-  font-family: Arial, sans-serif;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>RAAJ Modules</title>
+<link rel="stylesheet" href="style.css">
+</head>
 
-/* 🔲 GRID */
-body::before {
-  content: "";
-  position: fixed;
-  width: 200%;
-  height: 200%;
-  background-image: 
-    linear-gradient(#00ffcc22 1px, transparent 1px),
-    linear-gradient(90deg, #00ffcc22 1px, transparent 1px);
-  background-size: 40px 40px;
-  transform: perspective(900px) rotateX(60deg);
-  animation: moveGrid 12s linear infinite;
-  z-index: -2;
+<body>
 
-  /* 🔥 optional glow upgrade */
-  filter: drop-shadow(0 0 8px #00ffcc);
-}
+<!-- 🔥 HERO -->
+<section class="hero">
+  <h1>Max Performance. Zero Lag.</h1>
+  <p>Kernel-level optimization for real gaming</p>
 
-/* 🌌 CENTER GLOW */
-body::after {
-  content: "";
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle at center, #00ffcc22, transparent 70%);
-  z-index: -1;
-}
+  <div class="buttons">
+    <a href="#modules">Explore Modules</a>
+    <a href="https://github.com/raajk20pro">GitHub</a>
+  </div>
+</section>
 
-/* ✨ EXTRA TOP LIGHT (premium feel) */
-.hero::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 300px;
-  background: radial-gradient(circle, #00ffcc33, transparent 70%);
-  top: -100px;
-  left: 0;
-  z-index: -1;
-}
+<!-- ⚡ STATS -->
+<section class="stats">
+  <div>100+ Tweaks</div>
+  <div>Low Latency</div>
+  <div>Stable FPS</div>
+  <div>Real-time Boost</div>
+</section>
+
+<!-- 🎮 MODULES -->
+<section id="modules" class="modules">
+
+  <div class="card">
+    <h2>KernelEnhancer</h2>
+    <p>CPU, GPU, VM optimization</p>
+    <a href="https://github.com/raajk20pro/KernelEnhancer/releases">Download</a>
+  </div>
+
+  <div class="card">
+    <h2>GameEnhancer</h2>
+    <p>FPS boost & real-time scheduling</p>
+    <a href="https://github.com/raajk20pro/GameEnhancer/releases">Download</a>
+  </div>
+
+  <div class="card">
+    <h2>TouchEnhancer</h2>
+    <p>Ultra smooth touch response</p>
+    <a href="https://github.com/raajk20pro/TouchEnhancer/releases">Download</a>
+  </div>
+
+  <div class="card">
+    <h2>NetworkEnhancer</h2>
+    <p>Low ping & stable connection</p>
+    <a href="https://github.com/raajk20pro/NetworkEnhancer/releases">Download</a>
+  </div>
+
+</section>
+
+<!-- 📊 PERFORMANCE -->
+<section class="performance">
+  <h2>Real Performance Gains</h2>
+  <p>✔ Stable FPS in gaming</p>
+  <p>✔ Reduced touch delay</p>
+  <p>✔ Faster app response</p>
+</section>
+
+<!-- 👤 ABOUT -->
+<section class="about">
+  <h2>@RAAJK20Pro</h2>
+  <p>Android Performance Engineer</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 RAAJ Modules</p>
+</footer>
+
+</body>
+</html>}
 
 /* 🎬 GRID ANIMATION */
 @keyframes moveGrid {
