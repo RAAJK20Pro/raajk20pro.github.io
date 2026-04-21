@@ -27,14 +27,58 @@
   <div>Real-time Boost</div>
 </section>
 
-<!-- 🎮 MODULES -->
-<section id="modules" class="modules">
+<!-- 🎮 MODULES (ONLY ONCE) -->
+<section id="modules">
+
+  <h2>Core Modules</h2>
 
   <div class="card">
-    <h2>KernelEnhancer</h2>
+    <h3>KernelEnhancer</h3>
     <p>CPU, GPU, VM optimization</p>
     <a href="https://github.com/raajk20pro/KernelEnhancer/releases">Download</a>
   </div>
+
+  <div class="card">
+    <h3>GameEnhancer</h3>
+    <p>FPS boost & real-time scheduling</p>
+    <a href="https://github.com/raajk20pro/GameEnhancer/releases">Download</a>
+  </div>
+
+  <div class="card">
+    <h3>TouchEnhancer</h3>
+    <p>Ultra smooth touch response</p>
+    <a href="https://github.com/raajk20pro/TouchEnhancer/releases">Download</a>
+  </div>
+
+  <div class="card">
+    <h3>NetworkEnhancer</h3>
+    <p>Low ping & stable connection</p>
+    <a href="https://github.com/raajk20pro/NetworkEnhancer/releases">Download</a>
+  </div>
+
+</section>
+
+<!-- 📊 PERFORMANCE (ONLY ONCE) -->
+<section class="performance">
+  <h2>Real Performance Gains</h2>
+  <p>✔ Stable FPS in gaming</p>
+  <p>✔ Reduced touch delay</p>
+  <p>✔ Faster app response</p>
+</section>
+
+<!-- 👤 ABOUT -->
+<section class="about">
+  <h2>@RAAJK20Pro</h2>
+  <p>Android Performance Engineer</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 RAAJ Modules</p>
+</footer>
+
+</body>
+</html>  </div>
 
   <div class="card">
     <h2>GameEnhancer</h2>
