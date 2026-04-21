@@ -1,0 +1,95 @@
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background: black;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+/* 🔲 GRID */
+body::before {
+  content: "";
+  position: fixed;
+  width: 200%;
+  height: 200%;
+  background-image: 
+    linear-gradient(#00ffcc22 1px, transparent 1px),
+    linear-gradient(90deg, #00ffcc22 1px, transparent 1px);
+  background-size: 40px 40px;
+  transform: perspective(900px) rotateX(60deg);
+  animation: moveGrid 12s linear infinite;
+  z-index: -2;
+
+  /* 🔥 optional glow upgrade */
+  filter: drop-shadow(0 0 8px #00ffcc);
+}
+
+/* 🌌 CENTER GLOW */
+body::after {
+  content: "";
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, #00ffcc22, transparent 70%);
+  z-index: -1;
+}
+
+/* ✨ EXTRA TOP LIGHT (premium feel) */
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 300px;
+  background: radial-gradient(circle, #00ffcc33, transparent 70%);
+  top: -100px;
+  left: 0;
+  z-index: -1;
+}
+
+/* 🎬 GRID ANIMATION */
+@keyframes moveGrid {
+  from {
+    transform: perspective(900px) rotateX(60deg) translateY(0);
+  }
+  to {
+    transform: perspective(900px) rotateX(60deg) translateY(40px);
+  }
+}
+
+/* 💎 CARD GLASS EFFECT */
+.card {
+  background: rgba(255,255,255,0.05);
+  border-radius: 15px;
+  padding: 20px;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(0,255,204,0.2);
+  transition: 0.3s;
+}
+
+/* 🔥 HOVER EFFECT */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px #00ffcc55;
+}
+
+/* ⚡ BUTTON GLOW */
+button, .buttons a {
+  background: #00ffcc;
+  color: black;
+  border-radius: 10px;
+  padding: 10px 20px;
+  text-decoration: none;
+  border: none;
+  transition: 0.3s;
+}
+
+button:hover, .buttons a:hover {
+  box-shadow: 0 0 15px #00ffcc;
+}
+
+/* 📱 RESPONSIVE FIX */
+@media(max-width: 768px){
+  .modules {
+    grid-template-columns: 1fr;
+  }
+}
