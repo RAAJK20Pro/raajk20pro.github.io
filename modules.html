@@ -1,81 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modules | RAAJ</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modules | RAAJ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="bg-gradient"></div>
-    <nav>
-        <div class="logo"><a href="index.html">RAAJ<span class="dot">.</span></a></div>
-        <a href="index.html" class="back-link">Back Home</a>
-    </nav>
 
-    <section class="modules-page">
-        <div class="header-small fade-in">
-            <h2>All Modules</h2>
-            <p>Select a package to download</p>
+  <div class="glow-orb glow-orb-1"></div>
+  <div class="glow-orb glow-orb-2"></div>
+
+  <!-- NAV -->
+  <nav>
+    <div class="logo"><a href="index.html">RAAJ<span class="logo-dot">.</span></a></div>
+    <div class="nav-right">
+      <a href="modules.html" class="nav-link active">Modules</a>
+      <a href="changelog.html" class="nav-link">Changelog</a>
+      <a href="index.html" class="back-link" style="margin-left:8px;">Home</a>
+    </div>
+  </nav>
+
+  <!-- CONTENT -->
+  <section class="modules-page">
+
+    <div class="section-header fade-up">
+      <span class="section-label">Available Packages</span>
+      <h2 class="section-title">All Modules</h2>
+      <p class="section-sub">Tap to download. All modules are free & open source.</p>
+    </div>
+
+    <div class="modules-grid">
+
+      <!-- KernelEnhancer -->
+      <div class="module-card fade-up d1">
+        <div class="card-icon">⚡</div>
+        <div class="card-meta">
+          <h3>KernelEnhancer</h3>
+          <p>CPU governor tuning, GPU frequency scaling, and VM memory optimization for peak performance.</p>
         </div>
-
-        <div class="grid-container">
-            
-            <!-- Module 1 -->
-            <div class="card fade-in delay-1">
-                <div class="card-top">
-                    <h3>KernelEnhancer</h3>
-                    <p>CPU, GPU, VM optimization</p>
-                </div>
-                <div class="card-actions">
-                    <a href="https://github.com/raajk20pro/KernelEnhancer/releases" class="btn-download">Download v2.0</a>
-                    <a href="changelog.html" class="btn-changelog">View Changelog →</a>
-                </div>
-            </div>
-
-            <!-- Module 2 -->
-            <div class="card fade-in delay-2">
-                <div class="card-top">
-                    <h3>GameEnhancer</h3>
-                    <p>FPS boost & scheduling</p>
-                </div>
-                <div class="card-actions">
-                    <a href="https://github.com/raajk20pro/GameEnhancer/releases" class="btn-download">Download v1.5</a>
-                    <a href="changelog.html" class="btn-changelog">View Changelog →</a>
-                </div>
-            </div>
-
-            <!-- Module 3 -->
-            <div class="card fade-in delay-3">
-                <div class="card-top">
-                    <h3>TouchEnhancer</h3>
-                    <p>Ultra smooth response</p>
-                </div>
-                <div class="card-actions">
-                    <a href="https://github.com/raajk20pro/TouchEnhancer/releases" class="btn-download">Download v1.2</a>
-                    <a href="changelog.html" class="btn-changelog">View Changelog →</a>
-                </div>
-            </div>
-
-            <!-- Module 4 -->
-            <div class="card fade-in delay-4">
-                <div class="card-top">
-                    <h3>NetworkEnhancer</h3>
-                    <p>Low ping & stable net</p>
-                </div>
-                <div class="card-actions">
-                    <a href="https://github.com/raajk20pro/NetworkEnhancer/releases" class="btn-download">Download v1.0</a>
-                    <a href="changelog.html" class="btn-changelog">View Changelog →</a>
-                </div>
-            </div>
-
+        <div class="card-footer">
+          <a href="https://github.com/raajk20pro/KernelEnhancer/releases" class="btn-download">Download v2.0</a>
+          <a href="changelog.html" class="btn-log">View Changelog ↗</a>
         </div>
-    </section>
+      </div>
 
-    <footer>
-        <p>@RAAJK20Pro</p>
-        <p class="sub-footer">© 2026 RAAJ Modules</p>
-    </footer>
+      <!-- GameEnhancer -->
+      <div class="module-card fade-up d2">
+        <div class="card-icon">🎮</div>
+        <div class="card-meta">
+          <h3>GameEnhancer</h3>
+          <p>FPS booster with intelligent CPU/GPU scheduling. Optimized for BGMI, CODM, and more.</p>
+        </div>
+        <div class="card-footer">
+          <a href="https://github.com/raajk20pro/GameEnhancer/releases" class="btn-download">Download v1.5</a>
+          <a href="changelog.html" class="btn-log">View Changelog ↗</a>
+        </div>
+      </div>
+
+      <!-- TouchEnhancer -->
+      <div class="module-card fade-up d3">
+        <div class="card-icon">👆</div>
+        <div class="card-meta">
+          <h3>TouchEnhancer</h3>
+          <p>Ultra-smooth touch response with 1000Hz sampling rate support and jitter reduction.</p>
+        </div>
+        <div class="card-footer">
+          <a href="https://github.com/raajk20pro/TouchEnhancer/releases" class="btn-download">Download v1.2</a>
+          <a href="changelog.html" class="btn-log">View Changelog ↗</a>
+        </div>
+      </div>
+
+      <!-- NetworkEnhancer -->
+      <div class="module-card fade-up d4">
+        <div class="card-icon">📡</div>
+        <div class="card-meta">
+          <h3>NetworkEnhancer</h3>
+          <p>Low ping & stable connection with BBR congestion control and custom DNS presets.</p>
+        </div>
+        <div class="card-footer">
+          <a href="https://github.com/raajk20pro/NetworkEnhancer/releases" class="btn-download">Download v1.0</a>
+          <a href="changelog.html" class="btn-log">View Changelog ↗</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">RAAJ<span>.</span></div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="changelog.html">Changelog</a>
+      <a href="https://github.com/raajk20pro" target="_blank">GitHub</a>
+    </div>
+    <div class="footer-sub">© 2026 RAAJ Modules · @RAAJK20Pro</div>
+  </footer>
+
 </body>
 </html>
