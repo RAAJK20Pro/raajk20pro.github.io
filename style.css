@@ -3,9 +3,9 @@
 ----------------------------------------------------------- */
 :root {
     --bg-color: #ffffff;
-    --text-main: #1d1d1f; /* Apple Dark Grey */
+    --text-main: #1d1d1f;
     --text-muted: #86868b;
-    --accent-blue: #0071e3; /* Apple Blue */
+    --accent-blue: #0071e3;
     --accent-hover: #0077ed;
     --bg-grid: #e5e5e5;
     --card-bg: #ffffff;
@@ -14,7 +14,6 @@
     --shadow-hover: 0 8px 32px rgba(0, 0, 0, 0.08);
     --radius-lg: 20px;
     --radius-md: 12px;
-    --radius-sm: 8px;
     --font-stack: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
@@ -31,11 +30,10 @@ body {
 }
 
 /* -----------------------------------------------------------
-   BACKGROUND (Grid + Glow)
+   BACKGROUND
 ----------------------------------------------------------- */
 .bg-grid {
-    position: fixed;
-    top: 0; left: 0; width: 100%; height: 100%;
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
     background-image: 
         linear-gradient(var(--bg-grid) 1px, transparent 1px),
         linear-gradient(90deg, var(--bg-grid) 1px, transparent 1px);
@@ -47,13 +45,11 @@ body {
 }
 
 .bg-glow {
-    position: fixed;
-    top: -20%; left: 50%;
+    position: fixed; top: -20%; left: 50%;
     transform: translateX(-50%);
     width: 100vw; height: 80vh;
     background: radial-gradient(circle at center, rgba(0, 113, 227, 0.08) 0%, transparent 70%);
-    z-index: -1;
-    pointer-events: none;
+    z-index: -1; pointer-events: none;
 }
 
 /* -----------------------------------------------------------
@@ -64,11 +60,7 @@ body {
     padding: 24px 5%;
     max-width: 1200px; margin: 0 auto;
 }
-
-.logo {
-    font-weight: 700; font-size: 1.2rem; letter-spacing: -0.5px;
-}
-
+.logo { font-weight: 700; font-size: 1.2rem; letter-spacing: -0.5px; }
 .btn-nav {
     background: #f5f5f7; color: var(--text-main);
     padding: 8px 16px; border-radius: 20px;
@@ -78,11 +70,13 @@ body {
 .btn-nav:hover { background: #e8e8ed; }
 
 /* -----------------------------------------------------------
-   HERO SECTION
+   HERO SECTION (Fixed Typography)
 ----------------------------------------------------------- */
 .hero {
-    text-align: center; padding: 80px 20px 60px;
-    max-width: 800px; margin: 0 auto;
+    text-align: center; 
+    padding: 80px 20px 60px;
+    max-width: 800px; 
+    margin: 0 auto;
 }
 
 .badge {
@@ -93,7 +87,9 @@ body {
 }
 
 .hero h1 {
-    font-size: 3.5rem; font-weight: 700; letter-spacing: -1.5px;
+    /* Fixed: Responsive Font Size so it doesn't cut off */
+    font-size: clamp(2.5rem, 5vw, 3.5rem); 
+    font-weight: 700; letter-spacing: -1.5px;
     line-height: 1.1; margin-bottom: 20px;
 }
 
@@ -107,7 +103,7 @@ body {
     max-width: 600px; margin: 0 auto 32px;
 }
 
-.hero-btns { display: flex; gap: 16px; justify-content: center; }
+.hero-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
 
 .btn {
     padding: 12px 24px; border-radius: 30px;
@@ -115,24 +111,15 @@ body {
     transition: transform 0.2s ease;
 }
 .btn:active { transform: scale(0.98); }
-
-.btn-primary {
-    background: var(--text-main); color: white;
-}
+.btn-primary { background: var(--text-main); color: white; }
 .btn-primary:hover { background: #000; }
-
-.btn-secondary {
-    background: transparent; color: var(--accent-blue);
-}
+.btn-secondary { background: transparent; color: var(--accent-blue); }
 .btn-secondary:hover { text-decoration: underline; }
 
 /* -----------------------------------------------------------
    STATS BAR
 ----------------------------------------------------------- */
-.stats-section {
-    padding: 0 20px; margin-bottom: 80px;
-}
-
+.stats-section { padding: 0 20px; margin-bottom: 80px; }
 .stats-container {
     max-width: 900px; margin: 0 auto;
     background: var(--card-bg);
@@ -141,26 +128,26 @@ body {
     padding: 24px;
     display: flex; justify-content: space-around; align-items: center;
     box-shadow: var(--shadow-soft);
+    flex-wrap: wrap; /* Fix for small screens */
+    gap: 20px;
 }
-
-.stat-item { text-align: center; }
+.stat-item { text-align: center; min-width: 100px; }
 .stat-item strong { display: block; font-size: 1.2rem; color: var(--text-main); }
 .stat-item span { font-size: 0.85rem; color: var(--text-muted); }
-
 .stat-divider { width: 1px; height: 30px; background: var(--border-light); }
 
 /* -----------------------------------------------------------
-   MODULES SECTION
+   MODULES SECTION (Fixed Alignment & Buttons)
 ----------------------------------------------------------- */
 .modules-section {
     max-width: 1100px; margin: 0 auto; padding: 0 20px 80px;
 }
-
 .section-header { text-align: center; margin-bottom: 40px; }
 .section-header h2 { font-size: 2rem; font-weight: 600; letter-spacing: -0.5px; }
 
 .grid-layout {
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 24px;
 }
 
@@ -171,51 +158,61 @@ body {
     padding: 30px;
     transition: all 0.3s ease;
     display: flex; flex-direction: column;
+    align-items: flex-start; /* Aligns content to left */
 }
-
 .card:hover {
     transform: translateY(-4px);
     box-shadow: var(--shadow-hover);
     border-color: rgba(0, 113, 227, 0.2);
 }
 
-/* --- SVG ICON STYLING --- */
+/* Icon Alignment Fix */
 .icon-box {
     width: 48px; height: 48px;
-    background: #f5f5f7; /* Light grey/blue tint */
+    background: #f5f5f7;
     border-radius: 12px;
     display: flex; align-items: center; justify-content: center;
-    margin-bottom: 16px;
-    color: var(--accent-blue); /* Icons take accent color */
+    margin-bottom: 20px; /* Added spacing below icon */
+    color: var(--accent-blue);
 }
-
-.icon-box svg {
-    width: 24px; height: 24px;
-    stroke-width: 2px; /* Consistent thin stroke */
-}
+.icon-box svg { width: 24px; height: 24px; stroke-width: 2px; }
 
 .card h3 { font-size: 1.1rem; font-weight: 600; margin-bottom: 8px; }
-.card p { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 24px; flex-grow: 1; }
+.card p { 
+    font-size: 0.9rem; color: var(--text-muted); 
+    margin-bottom: 24px; 
+    line-height: 1.5;
+    flex-grow: 1; 
+}
 
+/* Button Styling Fix */
 .card-actions {
-    display: flex; flex-direction: column; gap: 10px;
+    width: 100%;
+    display: flex; flex-direction: column; gap: 12px;
+    margin-top: auto;
 }
 
 .btn-card {
-    text-align: center; padding: 10px; border-radius: var(--radius-md);
-    text-decoration: none; font-size: 0.9rem; font-weight: 500;
+    display: block;
+    text-align: center; 
+    padding: 12px; 
+    border-radius: var(--radius-md);
+    text-decoration: none; 
+    font-size: 0.9rem; 
+    font-weight: 600;
     transition: 0.2s;
 }
 
 .btn-card.primary {
     background: var(--accent-blue); color: white;
+    box-shadow: 0 2px 8px rgba(0, 113, 227, 0.2);
 }
 .btn-card.primary:hover { background: var(--accent-hover); }
 
 .btn-card.text {
-    color: var(--text-muted); font-size: 0.85rem;
+    color: var(--text-muted); background: transparent;
 }
-.btn-card.text:hover { color: var(--accent-blue); }
+.btn-card.text:hover { color: var(--accent-blue); background: #f5f5f7; }
 
 /* -----------------------------------------------------------
    PERFORMANCE SECTION
@@ -223,7 +220,6 @@ body {
 .performance-section {
     max-width: 900px; margin: 0 auto 80px; padding: 0 20px;
 }
-
 .perf-container {
     background: #fbfbfd;
     border: 1px solid var(--border-light);
@@ -232,9 +228,7 @@ body {
     display: flex; align-items: center; justify-content: space-between;
     gap: 40px;
 }
-
 .perf-text h2 { font-size: 1.8rem; margin-bottom: 20px; letter-spacing: -0.5px; }
-
 .checklist { list-style: none; }
 .checklist li {
     margin-bottom: 12px; font-size: 1rem; color: var(--text-main);
@@ -242,10 +236,7 @@ body {
 }
 .check { color: var(--accent-blue); font-weight: bold; }
 
-.perf-visual {
-    display: flex; align-items: center; justify-content: center;
-}
-
+.perf-visual { display: flex; align-items: center; justify-content: center; }
 .circle-outer {
     width: 120px; height: 120px;
     border: 2px solid rgba(0, 113, 227, 0.2);
@@ -253,13 +244,7 @@ body {
     display: flex; align-items: center; justify-content: center;
     animation: pulse 3s infinite ease-in-out;
 }
-
-.circle-inner {
-    width: 60px; height: 60px;
-    background: var(--accent-blue);
-    border-radius: 50%;
-    opacity: 0.8;
-}
+.circle-inner { width: 60px; height: 60px; background: var(--accent-blue); border-radius: 50%; opacity: 0.8; }
 
 @keyframes pulse {
     0% { transform: scale(1); opacity: 1; }
@@ -270,34 +255,25 @@ body {
 /* -----------------------------------------------------------
    FOOTER
 ----------------------------------------------------------- */
-footer {
-    text-align: center; padding: 40px 20px;
-    border-top: 1px solid var(--border-light);
-}
-
+footer { text-align: center; padding: 40px 20px; border-top: 1px solid var(--border-light); }
 .footer-content h3 { font-size: 1.1rem; margin-bottom: 4px; }
 .role { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 10px; }
 .disclaimer { font-size: 0.8rem; color: #aaa; margin-bottom: 20px; }
 .copyright { font-size: 0.75rem; color: #ccc; }
 
 /* -----------------------------------------------------------
-   ANIMATIONS & RESPONSIVE
+   ANIMATIONS & RESPONSIVE FIXES
 ----------------------------------------------------------- */
 .fade-in { opacity: 0; animation: fadeIn 0.8s ease forwards; }
-.delay-1 { animation-delay: 0.1s; }
-.delay-2 { animation-delay: 0.2s; }
-.delay-3 { animation-delay: 0.3s; }
-.delay-4 { animation-delay: 0.4s; }
+.delay-1 { animation-delay: 0.1s; } .delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.3s; } .delay-4 { animation-delay: 0.4s; }
 
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
+@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 
 @media (max-width: 768px) {
-    .hero h1 { font-size: 2.5rem; }
-    .stats-container { flex-direction: column; gap: 20px; padding: 30px; }
-    .stat-divider { width: 30px; height: 1px; }
-    .perf-container { flex-direction: column; text-align: center; }
+    .hero { padding-top: 60px; }
+    .stats-container { flex-direction: column; padding: 30px; }
+    .stat-divider { width: 30px; height: 1px; margin: 5px 0; }
+    .perf-container { flex-direction: column; text-align: center; padding: 30px; }
     .checklist li { justify-content: center; }
 }
