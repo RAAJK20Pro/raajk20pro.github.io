@@ -263,6 +263,36 @@ body {
     border-radius:99px;
 }
 
+
+/* CHECKLIST */
+.checklist-box {
+    max-width:480px;
+    margin:0 auto;
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+}
+.check-item {
+    display:flex;
+    align-items:center;
+    gap:14px;
+    background:var(--card-bg);
+    border:1px solid var(--card-border);
+    border-radius:14px;
+    padding:16px 20px;
+    font-size:1rem;
+    font-weight:500;
+    color:#e4e4e7;
+    backdrop-filter:blur(16px);
+    transition:border-color 0.2s;
+}
+.check-item:hover { border-color:rgba(79,142,247,0.3); }
+.check-icon {
+    color:#4f8ef7;
+    font-size:1rem;
+    flex-shrink:0;
+}
+
 /* =====================================================
    MODULES PAGE
 ===================================================== */
