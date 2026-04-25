@@ -420,8 +420,17 @@ footer {
 ===================================================== */
 @media (max-width:768px) {
     .hero { padding-top:40px; }
-    .stats-container { flex-direction:column; padding:24px; }
-    .stat-divider { width:40px; height:1px; }
+    .stats-container {
+        flex-direction:row;
+        flex-wrap:nowrap;
+        padding:18px 10px;
+        gap:0;
+        justify-content:space-between;
+    }
+    .stat-item { min-width:unset; flex:1; }
+    .stat-item strong { font-size:1.1rem; }
+    .stat-item span { font-size:0.66rem; }
+    .stat-divider { width:1px; height:28px; flex-shrink:0; }
     .perf-grid { grid-template-columns:1fr 1fr; }
     .module-grid { grid-template-columns:1fr; }
 }
