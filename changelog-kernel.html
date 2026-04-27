@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,76 +6,71 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body><!-- Background Elements -->
+<div class="bg-grid"></div>
+<div class="bg-glow"></div>
 
-    <!-- Background Elements -->
-    <div class="bg-grid"></div>
-    <div class="bg-glow"></div>
+<!-- Navigation -->
+<nav class="navbar fade-in">
+    <div class="logo"><a href="index.html">RAAJ<span class="dot">.</span></a></div>
+    <a href="modules.html" class="btn-nav">Back to Modules</a>
+</nav>
 
-    <!-- Navigation -->
-    <nav class="navbar fade-in">
-        <div class="logo"><a href="index.html">RAAJ<span class="dot">.</span></a></div>
-        <a href="modules.html" class="btn-nav">Back to Modules</a>
-    </nav>
+<!-- Content Container -->
+<section class="page-container fade-in delay-1">
+    
+    <div class="header-center">
+        <h2>KernelEnhancer Logs</h2>
+        <p>Update history for Kernel module</p>
+    </div>
 
-    <!-- Content Container -->
-    <section class="page-container fade-in delay-1">
+    <div class="log-list">
+
+        <!-- v4.0 -->
+        <div class="log-item">
+            <div class="log-meta">
+                <span class="log-title">v4.0 - Major Update</span>
+                <span class="log-date">Apr 27, 2026</span>
+            </div>
+            <ul class="log-points">
+                <li>Fully rewritten core engine for better stability</li>
+                <li>Smart boot detection & delayed execution</li>
+                <li>Advanced write system with permission auto-restore</li>
+                <li>Dynamic RAM-based VM tuning</li>
+                <li>Improved cache handling & reduced memory stalls</li>
+                <li>Scheduler optimization (better task migration)</li>
+                <li>Util clamp tuning for smoother performance</li>
+                <li>Auto CPU cluster detection (little / big / prime)</li>
+                <li>Per-cluster schedutil tuning</li>
+                <li>Dynamic input boost with prime core exclusion</li>
+                <li>Improved touch latency & responsiveness</li>
+                <li>MQ-Deadline & CFQ I/O tuning enhancements</li>
+                <li>Reduced disk overhead (iostats, add_random)</li>
+                <li>ZRAM read-ahead optimization</li>
+                <li>Filesystem limits increased (inotify, aio)</li>
+                <li>STUNE tuning with anti-revert protection</li>
+                <li>Workqueue & NUMA optimizations</li>
+                <li>Clean logging system (HH:MM format)</li>
+                <li>Logs saved to /data/local/tmp & /sdcard</li>
+            </ul>
+        </div>
         
-        <div class="header-center">
-            <h2>KernelEnhancer Logs</h2>
-            <p>Update history for Kernel module</p>
+        </div>
+            <ul class="log-points">
+                <li>Base kernel optimization</li>
+                <li>Custom CPU profiles added</li>
+            </ul>
         </div>
 
-        <div class="log-list">
-            
-            <!-- Update 1 -->
-            <div class="log-item">
-                <div class="log-meta">
-                    <span class="log-title">v2.0 - Stable Release</span>
-                    <span class="log-date">Apr 24, 2026</span>
-                </div>
-                <ul class="log-points">
-                    <li>Updated CPU Governors for SD 8 Gen series</li>
-                    <li>Fixed thermal throttling in heavy loads</li>
-                    <li>Android 15 Support added</li>
-                    <li>Improved battery efficiency by 10%</li>
-                </ul>
-            </div>
+    </div>
+</section>
 
-            <!-- Update 2 -->
-            <div class="log-item">
-                <div class="log-meta">
-                    <span class="log-title">v1.5 - Beta</span>
-                    <span class="log-date">Mar 10, 2026</span>
-                </div>
-                <ul class="log-points">
-                    <li>Initial VM Tweaks implementation</li>
-                    <li>Fixed bootloop on some devices</li>
-                    <li>Optimized I/O schedulers</li>
-                </ul>
-            </div>
-
-            <!-- Update 3 -->
-            <div class="log-item">
-                <div class="log-meta">
-                    <span class="log-title">v1.0 - Initial Release</span>
-                    <span class="log-date">Feb 01, 2026</span>
-                </div>
-                <ul class="log-points">
-                    <li>Base kernel optimization</li>
-                    <li>Custom CPU profiles added</li>
-                </ul>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="fade-in delay-2">
-        <div class="footer-content">
-            <p>© 2026 RAAJ Modules.</p>
-        </div>
-    </footer>
+<!-- Footer -->
+<footer class="fade-in delay-2">
+    <div class="footer-content">
+        <p>© 2026 RAAJ Modules.</p>
+    </div>
+</footer>
 
 </body>
 </html>
